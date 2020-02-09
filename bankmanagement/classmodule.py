@@ -36,9 +36,11 @@ class Account:
             self.__MoneyDeposited = balance
             print('Successfully deposited {} rupees in your account\n'.format(arg))
         else :
-            print('Error. Only enter positive integers\n')
+            print('Error. Only enter positive integers. Deposit failed.\n')
     
     def withdraw(self, arg):
+        if arg <= 0 :
+            print("Error. Enter only Positive Integers. Withdrawal failed.\n")
         if arg > self.__MoneyDeposited :
             print("Error. Money exceeded the balance. Cannot Withdraw\n")
         else :
